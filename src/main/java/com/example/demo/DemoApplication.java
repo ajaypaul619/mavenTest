@@ -13,7 +13,9 @@ public class DemoApplication extends SpringBootServletInitializer {
 	}
 
 	public static void main(String[] args) throws Exception {
-		System.out.println("hello deployed");
+		TestController controller = new TestController();
+		controller.getUser();
+		SpringApplication.run(DemoApplication.class, args);
 	}
 
 }
